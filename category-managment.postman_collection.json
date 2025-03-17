@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "ccedae16-20d6-4078-b4ac-bb2fa38e4588",
+		"name": "category-managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40594243"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODIxMSwiZXhwIjoxNzQ0NzgwMjExfQ.TI6tbmvKnXQJ_ImPyemgvfA1UyJaCTZYGJFx_INASlQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/auth/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/auth/me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODQxOSwiZXhwIjoxNzQ0NzgwNDE5fQ.2uY2ZRSK96KvQT68Y4Z6JmcWPWPnfFE537R4r1q39UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electronics\",\r\n  \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/auth/me",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODQxOSwiZXhwIjoxNzQ0NzgwNDE5fQ.2uY2ZRSK96KvQT68Y4Z6JmcWPWPnfFE537R4r1q39UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"clothes\",\r\n  \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/category",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODQxOSwiZXhwIjoxNzQ0NzgwNDE5fQ.2uY2ZRSK96KvQT68Y4Z6JmcWPWPnfFE537R4r1q39UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"T-shirsts\",\r\n  \"parent\": \"67d7bf0e912cf1d9ef85cddb\",  \r\n  \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/category/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/category/CATEGORY_ID_HERE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODQxOSwiZXhwIjoxNzQ0NzgwNDE5fQ.2uY2ZRSK96KvQT68Y4Z6JmcWPWPnfFE537R4r1q39UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"inactive\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/category/67d7b3ea912cf1d9ef85cdbd",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"67d7b3ea912cf1d9ef85cdbd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/category/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE4ODQxOSwiZXhwIjoxNzQ0NzgwNDE5fQ.2uY2ZRSK96KvQT68Y4Z6JmcWPWPnfFE537R4r1q39UQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/category/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{BASE_URL}}/api/category/67d7b3ea912cf1d9ef85cdbd",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDdhZWIzOTEyY2YxZDllZjg1Y2RhNCIsImlhdCI6MTc0MjE5MjcxNSwiZXhwIjoxNzQ0Nzg0NzE1fQ.Arr6IL0sUZXWJGpZjr7TnJx3ZcwoxRwdJoLSe3-7e9Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/category/67d7b3ea912cf1d9ef85cdbd",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category",
+						"67d7b3ea912cf1d9ef85cdbd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
